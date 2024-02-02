@@ -8,8 +8,7 @@ find_package(Qt6 6.5 REQUIRED COMPONENTS Quick)
 
 qt_standard_project_setup(REQUIRES 6.5)
 
-qt_add_executable(web-media-downloader-gui
-    src/testpy.h src/testpy.cpp)
+qt_add_executable(web-media-downloader-gui)
 add_subdirectory(src)
 add_subdirectory(qml)
 
@@ -36,4 +35,3 @@ install(TARGETS web-media-downloader-gui
 list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/")
 include(CPM)
 
-include(AddPybind)

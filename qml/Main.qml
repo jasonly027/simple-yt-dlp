@@ -9,6 +9,6 @@ Window {
     Button {
         anchors.centerIn: parent
         text: qsTr("Clickable")
-        onClicked: _TestPy.doPy()
+        onClicked: console.log("Clicked!")
     }
 }
