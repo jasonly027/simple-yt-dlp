@@ -9,7 +9,7 @@ int main(int argc, char *argv[]) {
     QObject::connect(
         &engine, &QQmlApplicationEngine::objectCreationFailed, &app,
         []() { QCoreApplication::exit(-1); }, Qt::QueuedConnection);
-    engine.loadFromModule("web-media-downloader-gui", "Main");
+    engine.loadFromModule("simple-yt-dlp", "Main");
 
     return app.exec();
 }
