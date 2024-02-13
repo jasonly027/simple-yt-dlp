@@ -13,7 +13,11 @@ include(AddDependencies)
 # Add Binary
 qt_add_executable(simple-yt-dlp)
 add_subdirectory(src)
-include(AddQmlModules)
+qt_add_qml_module(simple-yt-dlp
+        URI simple-yt-dlp
+        VERSION 1.0
+        QML_FILES src/Main.qml
+)
 
 include(GNUInstallDirs)
 install(TARGETS simple-yt-dlp
