@@ -14,7 +14,7 @@ include(AddDependencies)
 qt_add_executable(simple-yt-dlp)
 add_subdirectory(src)
 qt_add_qml_module(simple-yt-dlp
-        URI simple-yt-dlp
+        URI SimpleYtDlp
         VERSION 1.0
         QML_FILES src/Main.qml
 )

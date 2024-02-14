@@ -6,10 +6,13 @@ set_target_properties(simple-yt-dlp PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
 
-target_link_libraries(simple-yt-dlp
-    PRIVATE Qt6::Quick
-)
-
 target_sources(simple-yt-dlp PRIVATE
     main.cpp
+)
+
+add_subdirectory(YtDlp)
+target_link_libraries(simple-yt-dlp
+PRIVATE
+    Qt6::Quick
+    yt_dlpplugin
 )
