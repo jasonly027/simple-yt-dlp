@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Controls
+import YtDlp
 
 Window {
     height: 480
@@ -11,6 +12,6 @@ Window {
         anchors.centerIn: parent
         text: qsTr("Clickable")
 
-        onClicked: console.log("Clicked!")
+        onClicked: YtDlp.checkExecutableExists()
     }
 }
