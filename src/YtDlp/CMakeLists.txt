@@ -9,4 +9,6 @@ qt_add_qml_module(yt_dlp
     VERSION 1.0
     SOURCES
         yt_dlp.cpp yt_dlp.h
+        executable_worker.cpp executable_worker.h
+        executable_controller.cpp executable_controller.h
 )
