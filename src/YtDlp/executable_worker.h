@@ -8,11 +8,12 @@
 class ExecutableWorker : public QObject {
     Q_OBJECT
 public:
-    ExecutableWorker(QStringList &arguments, QObject *parent = 0);
-
-    [[nodiscard]] QProcess * process() const;
+    ExecutableWorker(const QStringList &arguments, QObject *parent = 0);
+    ~ExecutableWorker();
 public slots:
     void doWork();
+signals:
+    void workFinished();
 private:
     QProcess *m_process;
 };

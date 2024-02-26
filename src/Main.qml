@@ -4,7 +4,7 @@ import YtDlp
 
 Window {
     height: 480
-    title: qsTr("Hello World")
+    title: qsTr("Simple YT-DLP")
     visible: true
     width: 640
 
@@ -13,5 +13,16 @@ Window {
         text: qsTr("Clickable")
 
         onClicked: YtDlp.checkExecutableExists()
+    }
+    ListView {
+        anchors.right: parent.right
+        anchors.top: parent.top
+        height: 300
+        model: YtDlp.notifications
+        width: 300
+
+        delegate: Text {
+            text: model.title + model.description
+        }
     }
 }

@@ -10,7 +10,7 @@ class ExecutableController : public QObject {
 public:
     ExecutableController(QStringList arguments, QObject *parent = 0);
 private:
-    QThread m_thread;
+    QThread *m_thread;
 };
 
 #endif //SIMPLE_YT_DLP_EXECUTABLE_CONTROLLER_H
