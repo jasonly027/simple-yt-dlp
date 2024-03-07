@@ -11,6 +11,12 @@ int Notifications::rowCount(const QModelIndex &parent) const {
     return m_notifications.size();
 }
 
+void Notifications::prependRow(Notification &&notification) {
+    beginInsertRows(QModelIndex(), 0, 0);
+    m_notifications.push_front(std::move(notification));
+    endInsertRows();
+}
+
 QVariant Notifications::data(const QModelIndex &index, int role) const {
     if (!index.isValid())
         return QVariant();
